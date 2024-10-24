@@ -1,56 +1,68 @@
-/* Genel site stili */
+/* Genel stil ayarları */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .container {
-  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
+/* Header kısmı */
 header {
   background-color: #333;
-  color: white;
-  padding: 20px;
+  color: #fff;
   text-align: center;
+  padding: 20px 0;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
 }
 
 header h1 {
   margin: 0;
+  font-size: 2.5em;
 }
 
-.header-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+header p {
+  font-size: 1.2em;
+  margin: 10px 0 0;
 }
 
+/* İçerik kısmı */
 .content {
-  padding: 20px;
-  background-color: white;
+  margin: 20px 0;
 }
 
 .post {
+  background-color: #fff;
+  padding: 15px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.post-image {
-  width: 100%;
+.post h2 {
+  margin: 0 0 10px;
+}
+
+.post img {
+  max-width: 100%;
   height: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
+/* Footer kısmı */
 footer {
   background-color: #333;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
 }
