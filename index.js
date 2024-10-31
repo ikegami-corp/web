@@ -1,23 +1,36 @@
-// Sayfa yüklendiğinde konsola mesaj yazdırıyoruz.
-console.log('Sayfa başarıyla yüklendi!');
-
-// Örnek yeni post işlevi.
-function addNewPost(title, content) {
-  const newPost = document.createElement('article');
-  newPost.classList.add('post');
-
-  const postTitle = document.createElement('h2');
-  postTitle.textContent = title;
-
-  const postContent = document.createElement('p');
-  postContent.textContent = content;
-
-  newPost.appendChild(postTitle);
-  newPost.appendChild(postContent);
-  document.querySelector('.content').appendChild(newPost);
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-// Başlığa tıklandığında mesaj göster.
-document.querySelector('header h1').addEventListener('click', () => {
-  alert('池上産棄クリーンと開発事業のウェブサイトへようこそ！');
-});
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.greeting, .details, .final-disposal {
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
