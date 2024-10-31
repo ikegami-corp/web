@@ -1,34 +1,23 @@
 // Sayfa yüklendiğinde konsola mesaj yazdırıyoruz.
 console.log('Sayfa başarıyla yüklendi!');
 
-// Bir post eklemek için HTML elemanı oluşturuyoruz.
-function addNewPost() {
-  // Yeni bir article elementi oluşturuyoruz.
+// Örnek yeni post işlevi.
+function addNewPost(title, content) {
   const newPost = document.createElement('article');
   newPost.classList.add('post');
 
-  // Post başlığı oluşturuyoruz.
   const postTitle = document.createElement('h2');
-  postTitle.textContent = 'New Dynamic Post';
+  postTitle.textContent = title;
 
-  // Post içeriği oluşturuyoruz.
   const postContent = document.createElement('p');
-  postContent.textContent = 'This is a new post added dynamically using JavaScript.';
+  postContent.textContent = content;
 
-  // Postu sayfanın içeriğine ekliyoruz.
   newPost.appendChild(postTitle);
   newPost.appendChild(postContent);
-
-  // İçerik bölümünü buluyoruz ve yeni postu oraya ekliyoruz.
   document.querySelector('.content').appendChild(newPost);
 }
 
-// Butona tıklandığında çalışacak fonksiyon.
+// Başlığa tıklandığında mesaj göster.
 document.querySelector('header h1').addEventListener('click', () => {
-  alert('Welcome to the site!'); // Başlığa tıklandığında bir uyarı mesajı gösteriyoruz.
+  alert('池上産棄クリーンと開発事業のウェブサイトへようこそ！');
 });
-
-// Sayfa yüklendiğinde otomatik olarak yeni bir post ekliyoruz.
-window.onload = () => {
-  addNewPost();
-};
