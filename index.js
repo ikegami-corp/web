@@ -1,10 +1,10 @@
 async function validateAdmin() {
-  const inputPassword = document.getElementById("mp").value;
+  const inputPassword = document.getElementById("mp").value; // Admin parolası
 
-  const response = await fetch('elements/photoLocation.json');
+fetch('elements/elements/photoData/photoLocation.json')
   const data = await response.json();
 
-  // Admin şifresini çözme
+  // mp şifresini çözüyoruz
   const decryptedMp = data.positions.mp.map(pos => data.encryptedData[pos]).join('');
   const decryptedGp = data.positions.gp.map(pos => data.encryptedData[pos]).join('');
 
@@ -12,9 +12,9 @@ async function validateAdmin() {
     localStorage.setItem("isAdmin", true);
     enablePostPanel();
     closeModal();
-    console.log("Giriş başarılı!");
+    console.log("acces OK");
   } else {
-    alert("Hatalı şifre!");
+    alert("access denied");
   }
 }
 
@@ -23,19 +23,45 @@ function enablePostPanel() {
   document.querySelector(".post-panel").style.display = "block";
 }
 
-// Admin modal açma
+// A ekranını açma
 function showAdminLogin() {
   document.getElementById("adminModal").style.display = "block";
 }
 
-// Admin modal kapatma
+// A ekranını kapatma
 function closeModal() {
   document.getElementById("adminModal").style.display = "none";
 }
 
-// CTRL + P kısayolu ile modal açma
+// CTRL + P kısayolu ile a açma
 document.addEventListener("keydown", function(event) {
-  if (event.ctrlKey && event.key === "x") {
+  if (event.ctrlKey && event.key === "x") 
+  {
     showAdminLogin();
   }
+  
+
+  // Yeni gönderi ekleme işlevi
+  function addNewPost(title, content, imageUrl) 
+  {
+    const newPost = document.createElement('article');
+    newPost.classList.add('post');
+  
+    const postTitle = document.createElement('h2');
+    postTitle.textContent = title;
+  
+    const postContent = document.createElement('p');
+    postContent.textContent = content;
+  
+    const postImage = document.createElement('img');
+    postImage.src = imageUrl;
+    postImage.classList.add('post-image');
+  
+    newPost.appendChild(postTitle);
+    newPost.appendChild(postImage);
+    newPost.appendChild(postContent);
+  
+    document.querySelector('.content').appendChild(newPost);
+  }
+
 });
