@@ -1,10 +1,10 @@
 async function validateAdmin() {
-  const inputPassword = document.getElementById("mp").value; // Admin parolası
+  const inputPassword = document.getElementById("mp").value;
 
   const response = await fetch('elements/photoLocation.json');
   const data = await response.json();
 
-  // mp şifresini çözüyoruz
+  // Admin şifresini çözme
   const decryptedMp = data.positions.mp.map(pos => data.encryptedData[pos]).join('');
   const decryptedGp = data.positions.gp.map(pos => data.encryptedData[pos]).join('');
 
@@ -12,9 +12,9 @@ async function validateAdmin() {
     localStorage.setItem("isAdmin", true);
     enablePostPanel();
     closeModal();
-    console.log("acces OK");
+    console.log("Giriş başarılı!");
   } else {
-    alert("access denied");
+    alert("Hatalı şifre!");
   }
 }
 
@@ -23,45 +23,19 @@ function enablePostPanel() {
   document.querySelector(".post-panel").style.display = "block";
 }
 
-// A ekranını açma
+// Admin modal açma
 function showAdminLogin() {
   document.getElementById("adminModal").style.display = "block";
 }
 
-// A ekranını kapatma
+// Admin modal kapatma
 function closeModal() {
   document.getElementById("adminModal").style.display = "none";
 }
 
-// CTRL + P kısayolu ile a açma
+// CTRL + P kısayolu ile modal açma
 document.addEventListener("keydown", function(event) {
-  if (event.ctrlKey && event.key === "x") 
-  {
+  if (event.ctrlKey && event.key === "x") {
     showAdminLogin();
   }
-  
-
-  // Yeni gönderi ekleme işlevi
-  function addNewPost(title, content, imageUrl) 
-  {
-    const newPost = document.createElement('article');
-    newPost.classList.add('post');
-  
-    const postTitle = document.createElement('h2');
-    postTitle.textContent = title;
-  
-    const postContent = document.createElement('p');
-    postContent.textContent = content;
-  
-    const postImage = document.createElement('img');
-    postImage.src = imageUrl;
-    postImage.classList.add('post-image');
-  
-    newPost.appendChild(postTitle);
-    newPost.appendChild(postImage);
-    newPost.appendChild(postContent);
-  
-    document.querySelector('.content').appendChild(newPost);
-  }
-
 });
