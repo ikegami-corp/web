@@ -8,6 +8,19 @@
 </head>
 <body>
   <div class="container">
+
+    
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="image">Resim Yükle:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+      
+      <label for="text">Mesaj:</label>
+      <textarea id="text" name="text" rows="4" required></textarea>
+      
+      <button type="submit">Gönder</button>
+    </form>
+
+    
     <!-- 1. Kısım: En Üst Başlık ve Şirket Adı -->
     <header class="main-header">
       <h1>有限会社池上産棄クリーン <br> 有限会社池上開発事業</h1>
