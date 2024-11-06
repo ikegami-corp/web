@@ -87,21 +87,6 @@ section {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Info butonunu sağ üst köşeye yerleştirmek için stil */
-.info-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
-
-.info-icon:hover {
-  color: #4a90e2; /* Hover yapıldığında renk değişimi */
-}
-
-
 /* Mobil uyum */
 @media (max-width: 768px) {
   .main-header h1 {
