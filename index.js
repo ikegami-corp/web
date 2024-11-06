@@ -12,9 +12,9 @@ async function validateAdmin() {
     localStorage.setItem("isAdmin", true);
     enablePostPanel();
     closeModal();
-    console.log("Giriş başarılı!");
+    console.log("acces OK");
   } else {
-    alert("Hatalı şifre!");
+    alert("access denied");
   }
 }
 
@@ -35,29 +35,33 @@ function closeModal() {
 
 // CTRL + P kısayolu ile a açma
 document.addEventListener("keydown", function(event) {
-  if (event.ctrlKey && event.key === "p") {
+  if (event.ctrlKey && event.key === "x") 
+  {
     showAdminLogin();
   }
+  
+
+  // Yeni gönderi ekleme işlevi
+  function addNewPost(title, content, imageUrl) 
+  {
+    const newPost = document.createElement('article');
+    newPost.classList.add('post');
+  
+    const postTitle = document.createElement('h2');
+    postTitle.textContent = title;
+  
+    const postContent = document.createElement('p');
+    postContent.textContent = content;
+  
+    const postImage = document.createElement('img');
+    postImage.src = imageUrl;
+    postImage.classList.add('post-image');
+  
+    newPost.appendChild(postTitle);
+    newPost.appendChild(postImage);
+    newPost.appendChild(postContent);
+  
+    document.querySelector('.content').appendChild(newPost);
+  }
+
 });
-
-// Yeni gönderi ekleme işlevi
-function addNewPost(title, content, imageUrl) {
-  const newPost = document.createElement('article');
-  newPost.classList.add('post');
-
-  const postTitle = document.createElement('h2');
-  postTitle.textContent = title;
-
-  const postContent = document.createElement('p');
-  postContent.textContent = content;
-
-  const postImage = document.createElement('img');
-  postImage.src = imageUrl;
-  postImage.classList.add('post-image');
-
-  newPost.appendChild(postTitle);
-  newPost.appendChild(postImage);
-  newPost.appendChild(postContent);
-
-  document.querySelector('.content').appendChild(newPost);
-}
