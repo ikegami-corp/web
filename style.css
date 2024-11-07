@@ -88,16 +88,18 @@ section {
 }
 
 /* Instagram Simgesi Stili */
-.social-icon {
-  display: inline-block;
-  color: #E1306C;
-  font-size: 24px;
-  margin: 0 10px;
-  text-decoration: none;
+.instagram-icon {
+  width: 24px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
-.social-icon:hover {
-  color: #c13584;
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 
