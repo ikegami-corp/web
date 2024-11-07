@@ -44,30 +44,7 @@ body {
   font-size: 1.2em;
 }
 
-/* Instagram simgesi ve yazısını üste ve sola hizalama */
-.header-top {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  font-size: 1.2em; /* Yazının büyüklüğü */
-}
-
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.social-icon img {
-  width: 40px; /* Simgenin genişliği */
-  height: 40px; /* Simgenin yüksekliği */
-  margin-right: 8px; /* Simge ve yazı arasındaki boşluk */
-}
-
-
+/* Bölüm ve yazı stilleri */
 .section-image {
   width: 100%;
   height: auto;
@@ -109,6 +86,22 @@ section {
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Instagram Simgesi Stili */
+.instagram-icon {
+  width: 40px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 
 /* Mobil uyum */
 @media (max-width: 768px) {
