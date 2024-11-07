@@ -44,20 +44,29 @@ body {
   font-size: 1.2em;
 }
 
-/* Sosyal medya ikonu ve yazısı */
+/* Instagram simgesi ve yazısını üste ve sola hizalama */
+.header-top {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em; /* Yazının büyüklüğü */
+}
+
 .social-icon {
   display: inline-flex;
   align-items: center;
-  font-size: 1.2em; /* Instagram yazısı büyüklüğü */
-  color: #fff; /* Simgenin rengi */
+  color: #fff;
   text-decoration: none;
-  margin-top: 10px;
 }
 
-.social-icon i {
-  font-size: 1.5em; /* Instagram simgesinin büyüklüğü */
-  margin-right: 8px; /* Simgeden sonra boşluk */
+.social-icon img {
+  width: 40px; /* Simgenin genişliği */
+  height: 40px; /* Simgenin yüksekliği */
+  margin-right: 8px; /* Simge ve yazı arasındaki boşluk */
 }
+
 
 .section-image {
   width: 100%;
