@@ -87,6 +87,20 @@ section {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Instagram Simgesi Stili */
+.social-icon {
+  display: inline-block;
+  color: #E1306C;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #c13584;
+}
+
+
 /* Mobil uyum */
 @media (max-width: 768px) {
   .main-header h1 {
