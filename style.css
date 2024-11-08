@@ -87,6 +87,20 @@ section {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Main Header for Responsive Font Size */
+.main-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main-header h1 {
+    font-size: 1.6em; /* Slightly smaller to avoid kanji line breaks */
+  }
+}
+
 /* Styling for Top Navigation */
 .top-navigation {
   display: flex;
@@ -110,19 +124,6 @@ section {
 .top-navigation button:hover {
   background-color: #357ab8;
 }
-
-/* Main Header for Responsive Font Size */
-.main-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .main-header h1 {
-    font-size: 1.6em; /* Slightly smaller to avoid kanji line breaks */
-  }
-}
-
 
 /* Instagram Simgesi Stili */
 .instagram-icon {
