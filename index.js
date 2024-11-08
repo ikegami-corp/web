@@ -1,35 +1,39 @@
-index.js
+window.addEventListener('DOMContentLoaded', () => {
+  console.log('LOADED');
 
-console.log('LOADED');
+  function addNewPost() {
+    const newPost = document.createElement('article');
+    newPost.classList.add('post');
 
-function addNewPost() {
-  const newPost = document.createElement('article');
-  newPost.classList.add('post');
+    const postTitle = document.createElement('h2');
+    postTitle.textContent = 'New Dynamic Post';
 
-  const postTitle = document.createElement('h2');
-  postTitle.textContent = 'New Dynamic Post';
+    const postContent = document.createElement('p');
+    postContent.textContent = 'This is a new post added dynamically using JavaScript.';
 
-  const postContent = document.createElement('p');
-  postContent.textContent = 'This is a new post added dynamically using JavaScript.';
+    newPost.appendChild(postTitle);
+    newPost.appendChild(postContent);
 
-  newPost.appendChild(postTitle);
-  newPost.appendChild(postContent);
+    document.querySelector('.content').appendChild(newPost);
+  }
 
-  document.querySelector('.content').appendChild(newPost);
-}
-
-window.onload = () => {
   addNewPost();
-};
 
-// Smooth scroll to section
-function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
+  // Smooth scroll to section
+  window.scrollToSection = function(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.warn(`Section with ID '${sectionId}' not found`);
+    }
+  };
 
-// Başlığa tıklandığında mesaj göster.
-document.querySelector('header h1').addEventListener('click', () => {
-  alert('池上産棄クリーンと開発事業のウェブサイトへようこそ！');
+  // Başlığa tıklandığında mesaj göster.
+  const headerTitle = document.querySelector('header h1');
+  if (headerTitle) {
+    headerTitle.addEventListener('click', () => {
+      alert('池上産棄クリーンと開発事業のウェブサイトへようこそ！');
+    });
+  }
 });
-
-
