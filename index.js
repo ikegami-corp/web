@@ -19,11 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   addNewPost();
 
-  // Smooth scroll to section
-function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
-
   // Başlığa tıklandığında mesaj göster.
   const headerTitle = document.querySelector('header h1');
   if (headerTitle) {
