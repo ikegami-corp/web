@@ -20,6 +20,10 @@ window.onload = () => {
   addNewPost();
 };
 
+// Smooth scroll to section
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
 
 // Başlığa tıklandığında mesaj göster.
 document.querySelector('header h1').addEventListener('click', () => {
