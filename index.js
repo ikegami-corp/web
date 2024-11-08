@@ -20,14 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
   addNewPost();
 
   // Smooth scroll to section
-  window.scrollToSection = function(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.warn(`Section with ID '${sectionId}' not found`);
-    }
-  };
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
 
   // Başlığa tıklandığında mesaj göster.
   const headerTitle = document.querySelector('header h1');
