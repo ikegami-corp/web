@@ -1,3 +1,5 @@
+index.js
+
 console.log('LOADED');
 
 function addNewPost() {
@@ -29,3 +31,5 @@ function scrollToSection(sectionId) {
 document.querySelector('header h1').addEventListener('click', () => {
   alert('池上産棄クリーンと開発事業のウェブサイトへようこそ！');
 });
+
+
